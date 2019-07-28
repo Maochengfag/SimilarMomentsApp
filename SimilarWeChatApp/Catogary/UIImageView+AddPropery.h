@@ -10,4 +10,6 @@
 
 @interface UIImageView (AddPropery)
 
+@property (nonatomic,copy) NSString *downUrl;
+
 @end

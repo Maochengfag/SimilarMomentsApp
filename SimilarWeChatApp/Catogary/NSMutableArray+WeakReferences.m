@@ -9,5 +9,13 @@
 #import "NSMutableArray+WeakReferences.h"
 
 @implementation NSMutableArray (WeakReferences)
++ (id)mutableArrayUsingWeakReferences{
+    return [self mutableArrayUsingWeakReferencesWithCapacity:0];
+}
+
++ (id)mutableArrayUsingWeakReferencesWithCapacity:(NSUInteger)capacity{
+    CFArrayCallBacks callbacks = {0,NULL,NULL,CFCopyDescription,CFEqual};
+    return (id)CFBridgingRelease(CFArrayCreateMutable(0, capacity, &callbacks));
+}
 
 @end

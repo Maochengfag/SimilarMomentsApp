@@ -10,4 +10,6 @@
 
 @interface InfoViewCell : UITableViewCell
 
+- (void)doFillContent:(NSDictionary *)dic andIndex:(NSInteger)index;
+
 @end

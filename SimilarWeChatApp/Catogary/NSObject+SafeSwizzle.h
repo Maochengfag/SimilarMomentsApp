@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
 @interface NSObject (SafeSwizzle)
+
++ (void)safe_exchangeInstanceMethod:(Class)dClass originalSel:(SEL)originalSelector newSel:(SEL)newSelector;
 
 @end

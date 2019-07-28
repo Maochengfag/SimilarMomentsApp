@@ -10,6 +10,7 @@
 #import "TestTabBar.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+#import "PublishViewController.h"
 
 @interface RootTabBarVC ()<AxcAE_TabBarDelegate>
 
@@ -20,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self addChildViewControllers];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -103,21 +105,16 @@
 // 9.实现代理，如下：
 static NSInteger lastIdx = 0;
 - (void)axcAE_TabBar:(AxcAE_TabBar *)tabbar selectIndex:(NSInteger)index{
-    if (index != 2) { // 不是中间的就切换
+    if (index != 1) { // 不是中间的就切换
         // 通知 切换视图控制器
         [self setSelectedIndex:index];
         lastIdx = index;
     }else{ // 点击了中间的
         
         [self.axcTabBar setSelectIndex:lastIdx WithAnimation:NO]; // 换回上一个选中状态
-        // 或者
-        //        self.axcTabBar.selectIndex = lastIdx; // 不去切换TabBar的选中状态
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"点击了中间的,不切换视图"
-                                                                          preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:([UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            NSLog(@"好的！！！！");
-        }])];
-        [self presentViewController:alertController animated:YES completion:nil];
+        PublishViewController *publishVC = [[PublishViewController alloc] init];
+        UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:publishVC];
+        [self presentViewController:navi animated:YES completion:nil];
     }
 }
 - (void)setSelectedIndex:(NSUInteger)selectedIndex{

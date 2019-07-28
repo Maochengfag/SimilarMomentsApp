@@ -10,4 +10,14 @@
 
 @interface ImageFrameTool : NSObject
 
+- (NSArray *)oneImgFrame;
+- (NSArray *)twoImgsFrame;
+- (NSArray *)threeImgsFrame;
+- (NSArray *)fourImgsFrame;
+- (NSArray *)fiveImgsFrame;
+- (NSArray *)sixImgsFrame;
+- (NSArray *)sevenImageFrame;
+- (NSArray *)eightImageFrame;
+- (NSArray *)nineImageFrame;
+
 @end

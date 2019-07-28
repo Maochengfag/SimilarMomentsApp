@@ -10,4 +10,6 @@
 
 @interface ProfileViewCell : UITableViewCell
 
+- (void)doSetImage:(NSString *)imageName title:(NSString *)title;
+
 @end

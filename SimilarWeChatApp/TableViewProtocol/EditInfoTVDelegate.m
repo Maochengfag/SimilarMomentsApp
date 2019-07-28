@@ -10,4 +10,28 @@
 
 @implementation EditInfoTVDelegate
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row ==0) {
+        return 80;
+    }
+    return 55;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    switch (indexPath.row) {
+        case 0:
+            [self doEditIcon];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)doEditIcon{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showPicker" object:nil];
+}
+
 @end

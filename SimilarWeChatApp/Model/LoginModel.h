@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface LoginModel : NSObject
-
+@property (nonatomic, copy) NSString *phoneNum;
+@property (nonatomic, copy) NSString *password;
 @end

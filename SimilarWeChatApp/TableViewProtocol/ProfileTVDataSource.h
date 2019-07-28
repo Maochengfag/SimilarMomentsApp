@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface ProfileTVDataSource : NSObject
+@interface ProfileTVDataSource : NSObject<UITableViewDataSource>
+
+@property (nonatomic, strong) NSArray *dataArray;
 
 @end

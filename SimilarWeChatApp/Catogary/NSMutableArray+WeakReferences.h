@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSMutableArray (WeakReferences)
++ (id)mutableArrayUsingWeakReferences;
 
++ (id)mutableArrayUsingWeakReferencesWithCapacity:(NSUInteger)capacity;
 @end

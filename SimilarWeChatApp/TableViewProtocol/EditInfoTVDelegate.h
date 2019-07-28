@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface EditInfoTVDelegate : NSObject
+@interface EditInfoTVDelegate : NSObject<UITableViewDelegate>
+@property (nonatomic, strong) NSArray *array;
 
 @end

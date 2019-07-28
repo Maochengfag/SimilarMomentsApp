@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface FoundationTool : NSObject
+- (BOOL)isMobileNumber:(NSString *)mobileNum;
+- (void)showHUDWithView:(UIView *)showView title:(NSString *)string;
 
 @end

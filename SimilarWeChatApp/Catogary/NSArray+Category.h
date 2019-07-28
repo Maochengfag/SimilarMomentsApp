@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (Category)
+typedef void (^enumeration_block_t)(id obj, NSUInteger idx, BOOL *stop);
 
+
+@interface NSArray (Category)
+- (void)my_enumerateObjectsUsingBlock:(enumeration_block_t)block;
 @end

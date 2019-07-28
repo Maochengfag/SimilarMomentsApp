@@ -10,4 +10,10 @@
 
 @interface UserModel : NSObject
 
+@property (nonatomic, assign) NSInteger pkid;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSNumber *phoneName;
+@property (nonatomic, strong) NSData   *phoneData;
+@property (nonatomic, assign) BOOL     sex;
+
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface ProfileTVDelegate : NSObject
-
+@interface ProfileTVDelegate : NSObject<UITableViewDelegate>
+@property (nonatomic, strong) NSArray *array;
 @end
